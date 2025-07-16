@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Start | Hauklab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Logotypen ovanför sökrutan -->
+  <img src="img/logo.png" alt="HaukStart logotyp" class="logo" />
+    <h1 class="title">HaukStart</h1>
+
+    <div class="searchbox">
+      <img id="engine-icon" src="img/ddg.png" alt="Sökmotor" />
+      <input type="text" id="search" placeholder="Sök på webben..." autofocus />
+    </div>
+
+    <!-- Här visas favoritsidorna med favicon -->
+    <h2>Favoriter</h2>
+    <div id="fav-list" class="favorites-container"></div>
+
+    <!-- Inställningsknapp -->
+    <button id="settings-toggle" class="settings">⚙️</button>
+
+    <!-- Inställningsruta -->
+    <div id="settings" class="hidden settings-panel">
+      <hr />
+      <h2>Bakrundsbild (BETA)</h2>
+      <p>Välj en bild från din dator</p>
+      <label for="upload">Ladda upp bild:</label>
+      <input type="file" id="upload" accept="image/*" />
+      <hr />
+      <h2>Bakrundsbild</h2>
+      <p>Välj en mapp på din dator.</p>
+      <label for="folder-picker">Välj bildmapp:</label>
+      <input type="file" id="folder-picker" webkitdirectory multiple />
+      
+      <div id="image-gallery"></div>
+      <hr />
+
+      <h2>Lägg till favorit</h2>
+      <p>Lägg till dina favoritplatser för snabb åtkomst.</p>
+      <div id="favorites">
+        <form id="add-fav-form">
+          <input type="text" id="fav-name" placeholder="Namn på sida" required />
+          <input type="url" id="fav-url" placeholder="https://exempel.se" required />
+          <button type="submit">Lägg till</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer style="text-align: center; padding: 20px; font-size: 0.9rem; color: #ccc;">
+    <p>© 2025 Magnus Haukland — <a href="LICENSE" style="color: #ccc; text-decoration: underline;">MIT License</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
